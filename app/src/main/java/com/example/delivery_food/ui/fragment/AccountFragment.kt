@@ -3,7 +3,6 @@ package com.example.delivery_food.ui.fragment
 import androidx.fragment.app.Fragment
 import com.example.delivery_food.R
 import com.example.delivery_food.activity.AuthActivity
-import com.example.delivery_food.models.Users
 import com.example.delivery_food.utilites.AUTH
 import com.example.delivery_food.utilites.USER
 import com.example.delivery_food.utilites.replaceActivity
@@ -28,6 +27,6 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
 
     //Change date user
     private fun changeDataUser() {
-
+        replaceFragment(ChangeDateFragment())
     }
 }

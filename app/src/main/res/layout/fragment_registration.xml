@@ -33,7 +33,7 @@
             android:id="@+id/text_input_edt_email_registration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine" />
+            android:inputType="textImeMultiLine" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -57,7 +57,7 @@
             android:id="@+id/text_input_edt_password_registration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword|textMultiLine" />
+            android:inputType="textPassword|textImeMultiLine" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -78,7 +78,7 @@
             android:id="@+id/text_input_edt_name_registration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine" />
+            android:inputType="textImeMultiLine" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -101,7 +101,7 @@
             android:id="@+id/text_input_edt_phone_number_registration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number|textMultiLine"
+            android:inputType="number|textImeMultiLine"
             app:counterMaxLength="11" />
     </com.google.android.material.textfield.TextInputLayout>
 

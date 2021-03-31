@@ -9,7 +9,6 @@ lateinit var AUTH: FirebaseAuth
 lateinit var UID: String
 lateinit var REF_DATABASE_ROOT: DatabaseReference
 lateinit var USER: Users
-lateinit var EMAIL: String
 
 const val NODE_USERS = "users"
 const val CHILD_PHONE = "phone"

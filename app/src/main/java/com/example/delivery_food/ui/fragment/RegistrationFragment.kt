@@ -14,6 +14,7 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
         super.onStart()
         btn_registration.setOnClickListener { signUp() }
         registration_account_text_view.setOnClickListener { backAuthFragment() }
+        initFirebase()
     }
 
     //Replace fragment
