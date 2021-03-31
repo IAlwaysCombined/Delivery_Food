@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/restaurants"
+        android:icon="@drawable/restaurant"
+        android:title="@string/restaurants"/>
+
+    <item
+        android:id="@+id/basket"
+        android:icon="@drawable/basket"
+        android:title="@string/basket"/>
+    <item
+        android:id="@+id/personal"
+        android:icon="@drawable/account"
+        android:title="@string/personal"/>
+</menu>

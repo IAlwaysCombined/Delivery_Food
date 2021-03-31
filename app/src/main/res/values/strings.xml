@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Delivery_Food</string>
+    <string name="user">user</string>
+
+    <!-- Fragments name -->
+    <string name="restaurants">Рестораны</string>
+    <string name="basket">Корзина</string>
+    <string name="personal">Личное</string>
+
+    <string name="something_went_wrong">Что-то пошло не так</string>
+    <string name="fill_email">Заполните поле Email</string>
+    <string name="message_change_password_send">Сообщение отправленно</string>
+    <string name="fill_password">Заполните поле Пароль</string>
+    <string name="fill_name">Заполните поле Имя</string>
+    <string name="fill_phone_number">Заполните поле Номер телефона</string>
+    <string name="my_orders">Мои заказы</string>
+    <string name="my_date">Мои данные</string>
+    <string name="my_address">Мои адреса</string>
+    <string name="exit">Выйти</string>
+    <string name="enter">Войти</string>
+    <string name="change_password">Восстановить пароль</string>
+    <string name="create_account_now">Создайте аккаунт сейчас</string>
+    <string name="password">Пароль</string>
+    <string name="email">Email</string>
+    <string name="name">Имя</string>
+    <string name="number_phone">Номер телефона</string>
+    <string name="authorization">Авторизоваться</string>
+    <string name="registration">Зарегистрироваться</string>
+
+</resources>
