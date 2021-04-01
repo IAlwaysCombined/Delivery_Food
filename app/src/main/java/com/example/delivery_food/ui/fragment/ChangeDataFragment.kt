@@ -1,23 +1,21 @@
 package com.example.delivery_food.ui.fragment
 
 import androidx.fragment.app.Fragment
-import com.example.delivery_food.MainActivity
 import com.example.delivery_food.R
 import com.example.delivery_food.utilites.*
-import kotlinx.android.synthetic.main.fragment_chande_date.*
-import kotlinx.android.synthetic.main.fragment_registration.*
+import kotlinx.android.synthetic.main.fragment_change_data.*
 
-class ChangeDateFragment : Fragment(R.layout.fragment_chande_date) {
+class ChangeDataFragment : Fragment(R.layout.fragment_change_data) {
 
     override fun onStart() {
         super.onStart()
         initFields()
-        btn_back.setOnClickListener { back() }
-        btn_save_changes.setOnClickListener { saveChangesDateUser() }
+        data_btn_back.setOnClickListener { backFragmentAccount() }
+        btn_save_changes.setOnClickListener { saveChangesDataUser() }
     }
 
     //Save Changes
-    private fun saveChangesDateUser() {
+    private fun saveChangesDataUser() {
         val uid = AUTH.currentUser?.uid.toString()
         val dateMap = mutableMapOf<String, Any>()
         dateMap[CHILD_NAME] = text_input_edt_change_name.text.toString()
@@ -26,13 +24,13 @@ class ChangeDateFragment : Fragment(R.layout.fragment_chande_date) {
             .addOnCompleteListener {task ->
                 if(task.isSuccessful){
                     replaceFragment(AccountFragment())
-                    showToast(getString(R.string.date_update))
-                } else showToast(getString(R.string.something_went_wrong))
+                    showToast(getString(R.string.date_update_toast))
+                } else showToast(getString(R.string.something_went_wrong_toast))
             }
     }
 
     //Back fragment account
-    private fun back() {
+    private fun backFragmentAccount() {
         replaceFragment(AccountFragment())
     }
 

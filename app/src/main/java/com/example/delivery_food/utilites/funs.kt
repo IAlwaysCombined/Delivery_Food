@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.delivery_food.utilites
 
 import android.app.Activity

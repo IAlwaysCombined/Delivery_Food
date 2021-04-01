@@ -1,34 +1,41 @@
 <resources>
+    <!-- Application name -->
     <string name="app_name">Delivery_Food</string>
-    <string name="user">user</string>
 
     <!-- Fragments name -->
     <string name="restaurants">Рестораны</string>
     <string name="basket">Корзина</string>
     <string name="personal">Личное</string>
 
-    <string name="something_went_wrong">Что-то пошло не так</string>
-    <string name="fill_email">Заполните поле Email</string>
-    <string name="message_change_password_send">Сообщение отправленно</string>
-    <string name="fill_password">Заполните поле Пароль</string>
-    <string name="fill_name">Заполните поле Имя</string>
-    <string name="fill_phone_number">Заполните поле Номер телефона</string>
-    <string name="my_orders">Мои заказы</string>
-    <string name="my_date">Мои данные</string>
-    <string name="my_address">Мои адреса</string>
-    <string name="exit">Выйти</string>
-    <string name="enter">Войти</string>
-    <string name="change_password">Восстановить пароль</string>
-    <string name="create_account_now">Создайте аккаунт сейчас</string>
-    <string name="password">Пароль</string>
-    <string name="email">Email</string>
-    <string name="name">Имя</string>
-    <string name="number_phone">Номер телефона</string>
-    <string name="authorization">Авторизоваться</string>
-    <string name="registration">Зарегистрироваться</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="save">Сохранить</string>
-    <string name="date_update">Данные обновлены</string>
+    <!-- Toast -->
+    <string name="fill_email_toast">Заполните поле Email</string>
+    <string name="fill_password_toast">Заполните поле Пароль</string>
+    <string name="fill_name_toast">Заполните поле Имя</string>
+    <string name="fill_phone_number_toast">Заполните поле Номер телефона</string>
+    <string name="message_change_password_send_toast">Сообщение отправленно</string>
+    <string name="something_went_wrong_toast">Что-то пошло не так</string>
+    <string name="date_update_toast">Данные обновлены</string>
+    <string name="change_address_fragment_address_add_toast">Адрес добавлен</string>
 
+    <!-- Text view -->
+    <string name="auth_fragment_change_password_text_view">Восстановить пароль</string>
+    <string name="auth_fragment_create_account_now_text_view">Создайте аккаунт сейчас</string>
+    <string name="auth_fragment_authorization_text_view">Авторизоваться</string>
+    <string name="auth_fragment_enter_btn_text_and_text_view">Войти</string>
+    <string name="account_fragment_my_orders_text_view">Мои заказы</string>
+    <string name="account_fragment_my_data_text_view">Мои данные</string>
+    <string name="account_fragment_my_address_text_view">Мой адрес</string>
+    <string name="registration_fragment_registration_btn_text_and_text_view">Зарегистрироваться</string>
+
+    <!-- Hint -->
+    <string name="number_phone_hint">Номер телефона</string>
+    <string name="password_hint">Пароль</string>
+    <string name="email_hint">Email</string>
+    <string name="name_hint">Имя</string>
+    <string name="house_hint">Дом</string>
+
+
+    <!-- Button text -->
+    <string name="account_fragment_exit_btn_text">Выйти</string>
+    <string name="account_fragment_save_btn_text">Сохранить</string>
 </resources>

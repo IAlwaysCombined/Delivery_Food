@@ -24,5 +24,4 @@ class AppDrawer(var mainActivity: AppCompatActivity, private val mBinding: Activ
             true
         }
     }
-
 }

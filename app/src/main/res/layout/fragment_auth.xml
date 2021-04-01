@@ -10,7 +10,7 @@
         android:id="@+id/auth_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/enter"
+        android:text="@string/auth_fragment_enter_btn_text_and_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:hint="@string/email"
+        android:hint="@string/email_hint"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:hint="@string/password"
+        android:hint="@string/password_hint"
         app:counterEnabled="true"
         app:endIconMode="password_toggle"
         app:helperText="Минимальное число символов 6"
@@ -65,7 +65,7 @@
         android:id="@+id/btn_auth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/enter"
+        android:text="@string/auth_fragment_enter_btn_text_and_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_input_layout_password" />
@@ -74,7 +74,7 @@
         android:id="@+id/auth_account_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/create_account_now"
+        android:text="@string/auth_fragment_create_account_now_text_view"
         app:layout_constraintBottom_toTopOf="@id/auth_restore_password_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -83,7 +83,7 @@
         android:id="@+id/auth_restore_password_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/change_password"
+        android:text="@string/auth_fragment_change_password_text_view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

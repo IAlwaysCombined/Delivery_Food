@@ -29,17 +29,17 @@ class AuthFragment : Fragment(R.layout.fragment_auth) {
     //Restore password
     private fun restorePass() {
         if (TextUtils.isEmpty(text_input_edt_email.text)){
-            showToast(getString(R.string.fill_email))
+            showToast(getString(R.string.fill_email_toast))
             return
         }
         val emailAddress = text_input_edt_email.text.toString()
         AUTH.sendPasswordResetEmail(emailAddress)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    showToast(getString(R.string.message_change_password_send))
+                    showToast(getString(R.string.message_change_password_send_toast))
                 }
                 else{
-                    showToast(getString(R.string.something_went_wrong))
+                    showToast(getString(R.string.something_went_wrong_toast))
                 }
             }
     }
@@ -47,11 +47,11 @@ class AuthFragment : Fragment(R.layout.fragment_auth) {
     //Change email and pass user and replace Activity
     private fun signIn() {
         if (TextUtils.isEmpty(text_input_edt_email.text.toString())) {
-            showToast(getString(R.string.fill_email))
+            showToast(getString(R.string.fill_email_toast))
             return
         }
         else if(TextUtils.isEmpty(text_input_edt_password.text.toString())){
-            showToast(getString(R.string.fill_password))
+            showToast(getString(R.string.fill_password_toast))
             return
         }
         AUTH.signInWithEmailAndPassword(text_input_edt_email.text.toString(), text_input_edt_password.text.toString())
@@ -60,7 +60,7 @@ class AuthFragment : Fragment(R.layout.fragment_auth) {
                     replaceActivity(MainActivity())
                 }
                 else{
-                    showToast(getString(R.string.something_went_wrong))
+                    showToast(getString(R.string.something_went_wrong_toast))
                 }
             }
     }
