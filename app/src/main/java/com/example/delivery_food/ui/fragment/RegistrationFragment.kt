@@ -26,19 +26,19 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
     private fun signUp() {
         when {
             TextUtils.isEmpty(text_input_edt_email_registration.text.toString()) -> {
-                showToast(getString(R.string.fill_email))
+                showToast(getString(R.string.fill_email_toast))
                 return
             }
             TextUtils.isEmpty(text_input_edt_password_registration.text.toString()) -> {
-                showToast(getString(R.string.fill_password))
+                showToast(getString(R.string.fill_password_toast))
                 return
             }
             TextUtils.isEmpty(text_input_edt_name_registration.text.toString()) -> {
-                showToast(getString(R.string.fill_name))
+                showToast(getString(R.string.fill_name_toast))
                 return
             }
             TextUtils.isEmpty(text_input_edt_phone_number_registration.text.toString()) -> {
-                showToast(getString(R.string.fill_phone_number))
+                showToast(getString(R.string.fill_phone_number_toast))
                 return
             }
             else -> AUTH.createUserWithEmailAndPassword(
@@ -50,12 +50,12 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
                     val dateMap = mutableMapOf<String, Any>()
                     dateMap[CHILD_NAME] = text_input_edt_name_registration.text.toString()
                     dateMap[CHILD_PHONE] = text_input_edt_phone_number_registration.text.toString()
-                    dateMap[CHILD_ROLE] = getString(R.string.user)
+                    dateMap[CHILD_ROLE] = USER_ROLE
                     REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dateMap)
                         .addOnCompleteListener {task ->
                             if(task.isSuccessful){
                                 replaceActivity(MainActivity())
-                            } else showToast(getString(R.string.something_went_wrong))
+                            } else showToast(getString(R.string.something_went_wrong_toast))
                         }
                 }
         }

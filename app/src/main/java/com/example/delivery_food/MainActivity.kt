@@ -11,7 +11,7 @@ import com.example.delivery_food.utilites.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityMainBinding
-    lateinit var mAppDrawer: AppDrawer
+    private lateinit var mAppDrawer: AppDrawer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
@@ -46,6 +46,5 @@ class MainActivity : AppCompatActivity() {
             .addListenerForSingleValueEvent(AppValueEventListener {
                 USER = it.getValue(Users::class.java) ?: Users()
             })
-
     }
 }

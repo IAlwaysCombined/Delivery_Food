@@ -18,7 +18,7 @@
         android:id="@+id/orders_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/my_orders"
+        android:text="@string/account_fragment_my_orders_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_text_view" />
 
@@ -26,7 +26,7 @@
         android:id="@+id/data_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/my_date"
+        android:text="@string/account_fragment_my_data_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/orders_user" />
 
@@ -34,7 +34,7 @@
         android:id="@+id/address_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/my_address"
+        android:text="@string/account_fragment_my_address_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/data_user" />
 
@@ -42,7 +42,7 @@
         android:id="@+id/btn_exit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/exit"
+        android:text="@string/account_fragment_exit_btn_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

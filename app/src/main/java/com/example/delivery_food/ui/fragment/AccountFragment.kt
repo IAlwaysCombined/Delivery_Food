@@ -15,8 +15,9 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
     override fun onResume() {
         super.onResume()
         name_text_view.text = USER.name
-        btn_exit.setOnClickListener{signOut()}
+        btn_exit.setOnClickListener { signOut() }
         data_user.setOnClickListener { changeDataUser() }
+        address_user.setOnClickListener { changeAddressUser() }
     }
 
     //SignOut account
@@ -27,6 +28,11 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
 
     //Change date user
     private fun changeDataUser() {
-        replaceFragment(ChangeDateFragment())
+        replaceFragment(ChangeDataFragment())
+    }
+
+    //Change Address
+    private fun changeAddressUser() {
+        replaceFragment(ChangeAddressFragment())
     }
 }
