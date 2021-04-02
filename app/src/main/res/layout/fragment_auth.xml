@@ -8,8 +8,7 @@
 
     <TextView
         android:id="@+id/auth_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/largeText"
         android:text="@string/auth_fragment_enter_btn_text_and_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

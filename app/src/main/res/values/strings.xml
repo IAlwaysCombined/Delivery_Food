@@ -12,10 +12,15 @@
     <string name="fill_password_toast">Заполните поле Пароль</string>
     <string name="fill_name_toast">Заполните поле Имя</string>
     <string name="fill_phone_number_toast">Заполните поле Номер телефона</string>
+    <string name="fil_house_toast">Заполните поле Дом</string>
+    <string name="fill_entry_toast">Заполните поле Подъезд</string>
+    <string name="fill_floor_toast">Заполните поле Этаж</string>
+    <string name="fill_flat_toast">Заполните поле Квартира</string>
     <string name="message_change_password_send_toast">Сообщение отправленно</string>
     <string name="something_went_wrong_toast">Что-то пошло не так</string>
     <string name="date_update_toast">Данные обновлены</string>
     <string name="change_address_fragment_address_add_toast">Адрес добавлен</string>
+
 
     <!-- Text view -->
     <string name="auth_fragment_change_password_text_view">Восстановить пароль</string>
@@ -33,7 +38,9 @@
     <string name="email_hint">Email</string>
     <string name="name_hint">Имя</string>
     <string name="house_hint">Дом</string>
-
+    <string name="entry_hint">Подъезд</string>
+    <string name="floor_hint">Этаж</string>
+    <string name="flat_hint">Квартира</string>
 
     <!-- Button text -->
     <string name="account_fragment_exit_btn_text">Выйти</string>
