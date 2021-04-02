@@ -14,13 +14,12 @@ class ChangeDataFragment : Fragment(R.layout.fragment_change_data) {
         btn_save_changes.setOnClickListener { saveChangesDataUser() }
     }
 
-    //Save Changes
+    //Save changes data
     private fun saveChangesDataUser() {
-        val uid = AUTH.currentUser?.uid.toString()
         val dateMap = mutableMapOf<String, Any>()
         dateMap[CHILD_NAME] = text_input_edt_change_name.text.toString()
         dateMap[CHILD_PHONE] = text_input_change_number_phone.text.toString()
-        REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dateMap)
+        REF_DATABASE_ROOT.child(NODE_USERS).child(UID).updateChildren(dateMap)
             .addOnCompleteListener {task ->
                 if(task.isSuccessful){
                     replaceFragment(AccountFragment())
@@ -34,7 +33,7 @@ class ChangeDataFragment : Fragment(R.layout.fragment_change_data) {
         replaceFragment(AccountFragment())
     }
 
-    //Initial Fields
+    //Initial fields
     private fun initFields() {
         text_input_edt_change_name.setText(USER.name)
         text_input_change_number_phone.setText(USER.phone)

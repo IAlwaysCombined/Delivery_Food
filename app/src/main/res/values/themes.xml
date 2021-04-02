@@ -22,4 +22,17 @@
         <item name="android:layout_marginEnd">@dimen/margin_End</item>
     </style>
 
+    <style name="backButton">
+        <item name="android:layout_marginStart">@dimen/margin_Start</item>
+    </style>
+
+    <style name="Theme.Delivery_Food.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Delivery_Food.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Delivery_Food.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

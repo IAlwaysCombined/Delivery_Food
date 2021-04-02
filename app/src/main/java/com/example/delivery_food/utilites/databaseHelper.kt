@@ -26,7 +26,6 @@ const val CHILD_HOUSE = "house"
 const val CHILD_ENTRY = "entry"
 const val CHILD_FLOOR = "floor"
 const val CHILD_FLAT = "flat"
-const val CHILD_ID_ADDRESS = "id_address"
 
 //Role const
 const val USER_ROLE = "user"
