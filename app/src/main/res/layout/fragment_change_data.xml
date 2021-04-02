@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.ChangeDataFragment">
 
-    <Button
+    <ImageButton
         android:id="@+id/data_btn_back"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/date_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/largeText"
         android:text="@string/account_fragment_my_data_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,9 +67,9 @@
         android:id="@+id/btn_save_changes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout_change_number_phone"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/account_fragment_save_btn_text"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/account_fragment_save_btn_text"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_change_number_phone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
