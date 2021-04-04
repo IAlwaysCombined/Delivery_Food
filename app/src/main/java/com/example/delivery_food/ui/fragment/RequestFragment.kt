@@ -8,5 +8,4 @@ class RequestFragment : Fragment(R.layout.fragment_request) {
     override fun onStart() {
         super.onStart()
     }
-
 }

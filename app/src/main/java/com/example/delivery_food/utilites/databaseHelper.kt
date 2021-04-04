@@ -5,6 +5,7 @@ package com.example.delivery_food.utilites
 import com.example.delivery_food.models.Address
 import com.example.delivery_food.models.Users
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -30,6 +31,7 @@ const val CHILD_FLAT = "flat"
 //Role const
 const val USER_ROLE = "user"
 const val ADMIN_ROLE = "admin"
+const val RESTAURANTS_ROLE = "restaurants"
 
 //Initial firebase help function
 fun initFirebase() {
@@ -39,3 +41,6 @@ fun initFirebase() {
     ADDRESS = Address()
     UID = AUTH.currentUser?.uid.toString()
 }
+
+fun DataSnapshot.getCommonModel(): Users =
+    this.getValue(Users::class.java) ?: Users()
