@@ -3,6 +3,7 @@
 package com.example.delivery_food.utilites
 
 import com.example.delivery_food.models.Address
+import com.example.delivery_food.models.CommonModel
 import com.example.delivery_food.models.Users
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -42,5 +43,5 @@ fun initFirebase() {
     UID = AUTH.currentUser?.uid.toString()
 }
 
-fun DataSnapshot.getCommonModel(): Users =
-    this.getValue(Users::class.java) ?: Users()
+fun DataSnapshot.getCommonModel(): CommonModel =
+    this.getValue(CommonModel::class.java) ?: CommonModel()

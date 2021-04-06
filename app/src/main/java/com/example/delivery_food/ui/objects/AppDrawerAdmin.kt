@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.delivery_food.MainActivity
 import com.example.delivery_food.R
 import com.example.delivery_food.databinding.ActivityMainBinding
+import com.example.delivery_food.models.CommonModel
 import com.example.delivery_food.ui.fragment.*
 import com.example.delivery_food.utilites.replaceFragment
 

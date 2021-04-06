@@ -53,13 +53,16 @@ class MainActivity : AppCompatActivity() {
                             bottom_navigation_view.menu.clear()
                             bottom_navigation_view.inflateMenu(R.menu.menu_bottom_nav_admin)
                             mAppDrawerAdmin.create()
-                            replaceFragment(CatalogFragment())
+                            replaceFragment(AccountFragment())
                         }
                         USER_ROLE -> {
                             bottom_navigation_view.menu.clear()
                             bottom_navigation_view.inflateMenu(R.menu.menu_bottom_nav_user)
                             mAppDrawer.create()
-                            replaceFragment(AccountFragment())
+                            replaceFragment(CatalogFragment())
+                        }
+                        RESTAURANTS_ROLE -> {
+                            bottom_navigation_view.menu.clear()
                         }
                     }
                 })
