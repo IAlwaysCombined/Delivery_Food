@@ -3,7 +3,7 @@ package com.example.delivery_food.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.delivery_food.databinding.ActivityAuthBinding
-import com.example.delivery_food.ui.fragment.AuthFragment
+import com.example.delivery_food.ui.fragment.screens.auth.AuthFragment
 import com.example.delivery_food.utilites.initFirebase
 import com.example.delivery_food.utilites.replaceFragmentAuth
 

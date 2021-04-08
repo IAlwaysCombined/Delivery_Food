@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/requestFragment"
-        android:name="com.example.delivery_food.ui.fragment.RequestFragment"
+        android:name="com.example.delivery_food.ui.fragment.screens.admin.RequestFragment"
         android:label="fragment_request"
         tools:layout="@layout/fragment_request" />
     <fragment
         android:id="@+id/userListFragment"
-        android:name="com.example.delivery_food.ui.fragment.UserListFragment"
+        android:name="com.example.delivery_food.ui.fragment.screens.admin.UserListFragment"
         android:label="fragment_user_list"
         tools:layout="@layout/fragment_user_list" />
     <fragment
         android:id="@+id/accountFragment2"
-        android:name="com.example.delivery_food.ui.fragment.AccountFragment"
+        android:name="com.example.delivery_food.ui.fragment.screens.user.AccountFragment"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" />
 </navigation>

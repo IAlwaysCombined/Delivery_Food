@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.screens.user.ChangeDataFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.screens.user.CreateOrdersRestaurantFragment">
 
     <ImageButton
         android:id="@+id/order_restaurant_btn_back"
@@ -17,9 +17,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/data_text_view"
+        android:id="@+id/orders_text_view"
         style="@style/largeText"
-        android:text="@string/account_fragment_my_data_text_view"
+        android:text="@string/create_order"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/order_restaurant_btn_back" />
@@ -32,10 +32,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:hint="@string/name_hint"
+        android:hint="@string/restaurant_name_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/data_text_view">
+        app:layout_constraintTop_toBottomOf="@+id/orders_text_view">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/text_input_edt_change_name"
@@ -45,33 +45,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_change_number_phone"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:hint="@string/number_phone_hint"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout_change_name">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/text_input_change_number_phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textImeMultiLine" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <Button
-        android:id="@+id/btn_save_changes"
+        android:id="@+id/btn_create_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/account_fragment_save_btn_text"
+        android:text="@string/create_order"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout_change_number_phone" />
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_change_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

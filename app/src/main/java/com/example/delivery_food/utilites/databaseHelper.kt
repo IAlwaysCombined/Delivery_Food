@@ -4,6 +4,7 @@ package com.example.delivery_food.utilites
 
 import com.example.delivery_food.models.Address
 import com.example.delivery_food.models.CommonModel
+import com.example.delivery_food.models.Restaurant
 import com.example.delivery_food.models.Users
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -15,13 +16,17 @@ lateinit var UID: String
 lateinit var REF_DATABASE_ROOT: DatabaseReference
 lateinit var USER: Users
 lateinit var ADDRESS: Address
+lateinit var RESTAURANT: Restaurant
 
 //User const
 const val NODE_USERS = "users"
 const val NODE_ADDRESS = "address"
+const val NODE_RESTAURANT = "restaurant"
+const val NODE_ORDERS_CREATE_RESTAURANT = "orders_create_restaurant"
 const val CHILD_PHONE = "phone"
 const val CHILD_ROLE = "role"
 const val CHILD_NAME = "name"
+const val CHILD_ID = "uid"
 
 //Address const
 const val CHILD_HOUSE = "house"
@@ -40,6 +45,7 @@ fun initFirebase() {
     REF_DATABASE_ROOT = FirebaseDatabase.getInstance().reference
     USER = Users()
     ADDRESS = Address()
+    RESTAURANT = Restaurant()
     UID = AUTH.currentUser?.uid.toString()
 }
 

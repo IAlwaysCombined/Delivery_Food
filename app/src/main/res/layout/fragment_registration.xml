@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.RegistrationFragment">
+    tools:context=".ui.fragment.screens.auth.RegistrationFragment">
 
     <TextView
         android:id="@+id/registration_text_view"
@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_email_registration"
+        android:id="@+id/text_input_layout_email_registration_restaurant"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
         app:helperText="Минимальное число символов 6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout_email_registration"
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_email_registration_restaurant"
         app:startIconDrawable="@drawable/lock">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -112,6 +112,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_input_layout_phone_number_registration" />
+
 
     <TextView
         android:id="@+id/registration_account_text_view"

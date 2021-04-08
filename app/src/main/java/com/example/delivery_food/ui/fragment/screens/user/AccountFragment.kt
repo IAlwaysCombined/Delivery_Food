@@ -1,12 +1,9 @@
-package com.example.delivery_food.ui.fragment
+package com.example.delivery_food.ui.fragment.screens.user
 
 import androidx.fragment.app.Fragment
 import com.example.delivery_food.R
 import com.example.delivery_food.activity.AuthActivity
-import com.example.delivery_food.utilites.AUTH
-import com.example.delivery_food.utilites.USER
-import com.example.delivery_food.utilites.replaceActivity
-import com.example.delivery_food.utilites.replaceFragment
+import com.example.delivery_food.utilites.*
 import kotlinx.android.synthetic.main.fragment_account.*
 
 
@@ -18,6 +15,12 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
         btn_exit.setOnClickListener { signOut() }
         data_user.setOnClickListener { changeDataUser() }
         address_user.setOnClickListener { changeAddressUser() }
+        order_restaurants.setOnClickListener { orderOnCrateRestaurant() }
+    }
+
+    //Create restaurant order replace fragment
+    private fun orderOnCrateRestaurant() {
+        replaceFragment(CreateOrdersRestaurantFragment())
     }
 
     //SignOut account

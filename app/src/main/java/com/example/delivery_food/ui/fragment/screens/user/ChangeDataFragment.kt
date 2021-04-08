@@ -1,4 +1,4 @@
-package com.example.delivery_food.ui.fragment
+package com.example.delivery_food.ui.fragment.screens.user
 
 import androidx.fragment.app.Fragment
 import com.example.delivery_food.R
@@ -10,7 +10,7 @@ class ChangeDataFragment : Fragment(R.layout.fragment_change_data) {
     override fun onStart() {
         super.onStart()
         initFields()
-        data_btn_back.setOnClickListener { backFragmentAccount() }
+        order_restaurant_btn_back.setOnClickListener { backFragmentAccount() }
         btn_save_changes.setOnClickListener { saveChangesDataUser() }
     }
 

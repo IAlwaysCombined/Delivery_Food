@@ -2,12 +2,12 @@ package com.example.delivery_food.models
 
 
 data class CommonModel(
-    val id: String = "",
+    val uid: String = "",
     val name: String = "",
     val phone: String = "",
-    val role: String = ""
+    val role: String = "",
 ){
     override fun equals(other: Any?): Boolean {
-        return (other as CommonModel).id == id
+        return (other as CommonModel).uid == uid
     }
 }

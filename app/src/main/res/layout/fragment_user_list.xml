@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragment.UserListFragment">
+    tools:context=".ui.fragment.screens.admin.UserListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/users_recycler_view"
@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/users_card"/>
+        tools:listitem="@layout/list_item_user"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

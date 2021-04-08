@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.AccountFragment">
+    tools:context=".ui.fragment.screens.user.AccountFragment">
 
     <TextView
         android:id="@+id/name_text_view"
@@ -46,6 +46,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/data_user" />
+
+    <Button
+        android:id="@+id/order_restaurants"
+        style="@style/buttonInformationAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="@string/orders_on_create_restaurant_btn_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_user" />
 
     <Button
         android:id="@+id/btn_exit"

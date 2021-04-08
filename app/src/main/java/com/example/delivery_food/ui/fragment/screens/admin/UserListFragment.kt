@@ -1,14 +1,11 @@
-package com.example.delivery_food.ui.fragment
+package com.example.delivery_food.ui.fragment.screens.admin
 
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.delivery_food.R
 import com.example.delivery_food.adapters.UserListAdapter
 import com.example.delivery_food.models.CommonModel
-import com.example.delivery_food.utilites.AppValueEventListener
-import com.example.delivery_food.utilites.NODE_USERS
-import com.example.delivery_food.utilites.REF_DATABASE_ROOT
-import com.example.delivery_food.utilites.getCommonModel
+import com.example.delivery_food.utilites.*
 import com.google.firebase.database.DatabaseReference
 import kotlinx.android.synthetic.main.fragment_user_list.*
 

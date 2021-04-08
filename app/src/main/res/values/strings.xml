@@ -6,6 +6,10 @@
     <string name="restaurants">Рестораны</string>
     <string name="basket">Корзина</string>
     <string name="personal">Личное</string>
+    <string name="orders">Заказы</string>
+    <string name="dishes_list">Список блюд</string>
+    <string name="requests">Заявки</string>
+    <string name="user_list">Список пользователей</string>
 
     <!-- Toast -->
     <string name="fill_email_toast">Заполните поле Email</string>
@@ -41,21 +45,21 @@
     <string name="entry_hint">Подъезд</string>
     <string name="floor_hint">Этаж</string>
     <string name="flat_hint">Квартира</string>
+    <string name="restaurant_name_hint">Название ресторана</string>
+    <string name="name_dishes_hint">Название блюда</string>
 
     <!-- Button text -->
     <string name="account_fragment_exit_btn_text">Выйти</string>
     <string name="account_fragment_save_btn_text">Сохранить</string>
-    <string name="requests">Заявки</string>
-    <string name="user_list">Список пользователей</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_admin">AdminActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="add_dishes">Добавление блюда</string>
+    <string name="add_dishes_text_view">Добавить блюдо</string>
+    <string name="calories_hint">Количество каллорий</string>
+    <string name="coast_hint">Стоимость</string>
+    <string name="orders_on_create_restaurant_btn_text">Заявка на создание ресторана</string>
+    <string name="order_successfully_sent">Заявка успешно отправлена</string>
+    <string name="create_order">Оставить заявку</string>
+    <string name="add">Добавить</string>
+    <string name="delete">Удалить</string>
+
 </resources>

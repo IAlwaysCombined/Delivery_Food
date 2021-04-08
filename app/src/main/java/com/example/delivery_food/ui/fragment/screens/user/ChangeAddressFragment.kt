@@ -1,4 +1,4 @@
-package com.example.delivery_food.ui.fragment
+package com.example.delivery_food.ui.fragment.screens.user
 
 import android.text.TextUtils
 import androidx.fragment.app.Fragment

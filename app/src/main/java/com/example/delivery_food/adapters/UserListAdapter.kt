@@ -18,7 +18,7 @@ class UserListAdapter(private var mUserList: MutableList<CommonModel> = mutableL
     override fun getItemCount() = mUserList.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.users_card, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item_user, parent, false)
         return UserViewHolder(itemView)
     }
 
