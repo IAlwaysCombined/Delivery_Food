@@ -1,21 +1,33 @@
 package com.example.delivery_food.ui.fragment.screens.user
 
+import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.delivery_food.R
 import com.example.delivery_food.activity.AuthActivity
-import com.example.delivery_food.utilites.*
-import kotlinx.android.synthetic.main.fragment_account.*
+import com.example.delivery_food.databinding.FragmentAccountBinding
+import com.example.delivery_food.utilites.AUTH
+import com.example.delivery_food.utilites.USER
+import com.example.delivery_food.utilites.replaceActivity
+import com.example.delivery_food.utilites.replaceFragment
 
 
 class AccountFragment : Fragment(R.layout.fragment_account) {
 
+    private lateinit var binding: FragmentAccountBinding
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentAccountBinding.bind(view)
+    }
+
     override fun onResume() {
         super.onResume()
-        name_text_view.text = USER.name
-        btn_exit.setOnClickListener { signOut() }
-        data_user.setOnClickListener { changeDataUser() }
-        address_user.setOnClickListener { changeAddressUser() }
-        order_restaurants.setOnClickListener { orderOnCrateRestaurant() }
+        binding.nameTextView.text = USER.name
+        binding.btnExit.setOnClickListener { signOut() }
+        binding.dataUser.setOnClickListener { changeDataUser() }
+        binding.addressUser.setOnClickListener { changeAddressUser() }
+        binding.orderRestaurants.setOnClickListener { orderOnCrateRestaurant() }
     }
 
     //Create restaurant order replace fragment

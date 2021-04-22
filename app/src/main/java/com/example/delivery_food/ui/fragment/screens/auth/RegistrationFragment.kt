@@ -1,19 +1,28 @@
 package com.example.delivery_food.ui.fragment.screens.auth
 
+import android.os.Bundle
 import android.text.TextUtils
+import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.delivery_food.MainActivity
 import com.example.delivery_food.R
+import com.example.delivery_food.databinding.FragmentRegistrationBinding
 import com.example.delivery_food.utilites.*
-import kotlinx.android.synthetic.main.fragment_registration.*
 
 
 class RegistrationFragment : Fragment(R.layout.fragment_registration) {
 
+    private lateinit var binding: FragmentRegistrationBinding
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentRegistrationBinding.bind(view)
+    }
+
     override fun onStart() {
         super.onStart()
-        btn_registration.setOnClickListener { signUp() }
-        registration_account_text_view.setOnClickListener { backAuthFragment() }
+        binding.btnRegistration.setOnClickListener { signUp() }
+        binding.registrationAccountTextView.setOnClickListener { backAuthFragment() }
         initFirebase()
     }
 
@@ -25,31 +34,31 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
     //SignUp account
     private fun signUp() {
         when {
-            TextUtils.isEmpty(text_input_edt_email_registration.text.toString()) -> {
+            TextUtils.isEmpty(binding.textInputEdtEmailRegistration.text.toString()) -> {
                 showToast(getString(R.string.fill_email_toast))
                 return
             }
-            TextUtils.isEmpty(text_input_edt_password_registration.text.toString()) -> {
+            TextUtils.isEmpty(binding.textInputEdtPasswordRegistration.text.toString()) -> {
                 showToast(getString(R.string.fill_password_toast))
                 return
             }
-            TextUtils.isEmpty(text_input_edt_name_registration.text.toString()) -> {
+            TextUtils.isEmpty(binding.textInputEdtNameRegistration.text.toString()) -> {
                 showToast(getString(R.string.fill_name_toast))
                 return
             }
-            TextUtils.isEmpty(text_input_edt_phone_number_registration.text.toString()) -> {
+            TextUtils.isEmpty(binding.textInputEdtPhoneNumberRegistration.text.toString()) -> {
                 showToast(getString(R.string.fill_phone_number_toast))
                 return
             }
             else -> AUTH.createUserWithEmailAndPassword(
-                text_input_edt_email_registration.text.toString(),
-                text_input_edt_password_registration.text.toString()
+                binding.textInputEdtEmailRegistration.text.toString(),
+                binding.textInputEdtPasswordRegistration.text.toString()
             )
                 .addOnCompleteListener {
                     val uid = AUTH.currentUser?.uid.toString()
                     val dateMap = mutableMapOf<String, Any>()
-                    dateMap[CHILD_NAME] = text_input_edt_name_registration.text.toString()
-                    dateMap[CHILD_PHONE] = text_input_edt_phone_number_registration.text.toString()
+                    dateMap[CHILD_NAME] = binding.textInputEdtNameRegistration.text.toString()
+                    dateMap[CHILD_PHONE] = binding.textInputEdtPhoneNumberRegistration.text.toString()
                     dateMap[CHILD_ROLE] = USER_ROLE
                     REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dateMap)
                         .addOnCompleteListener {task ->

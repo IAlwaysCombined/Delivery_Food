@@ -1,12 +1,12 @@
-package com.example.delivery_food
+ package com.example.delivery_food
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.delivery_food.activity.AuthActivity
-import com.example.delivery_food.adapters.RequestRestaurantListAdapter
 import com.example.delivery_food.databinding.ActivityMainBinding
 import com.example.delivery_food.models.Address
 import com.example.delivery_food.models.CommonModel
+import com.example.delivery_food.models.Restaurant
 import com.example.delivery_food.models.Users
 import com.example.delivery_food.ui.fragment.screens.restaurant.AccountRestaurantFragment
 import com.example.delivery_food.ui.fragment.screens.user.AccountFragment
@@ -16,11 +16,9 @@ import com.example.delivery_food.ui.objects.AppDrawerAdmin
 import com.example.delivery_food.ui.objects.AppDrawerRestaurant
 import com.example.delivery_food.utilites.*
 import com.google.firebase.database.DatabaseReference
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_request.*
 
 
-class MainActivity : AppCompatActivity() {
+ class MainActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityMainBinding
     private lateinit var mAppDrawer: AppDrawer
@@ -29,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     private var mUserList = mutableListOf<CommonModel>()
     private lateinit var mUserListener: AppValueEventListener
     private lateinit var mRefUser: DatabaseReference
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
@@ -51,25 +50,16 @@ class MainActivity : AppCompatActivity() {
         initFirebase()
         initUser()
         initAddress()
+        initRestaurant()
     }
 
     //Initial functions
     private fun initFunc() {
         if (AUTH.currentUser != null) {
             changeUserRole()
-            //changeRestaurantRole()
         } else {
             replaceActivity(AuthActivity())
         }
-    }
-
-    private fun changeRestaurantRole() {
-        mRefUser = REF_DATABASE_ROOT.child(NODE_RESTAURANT)
-        mUserListener = AppValueEventListener { dataSnapshot ->
-            mUserList = dataSnapshot.children.map { it.getCommonModel() } as MutableList<CommonModel>
-            println(mUserList)
-        }
-        mRefUser.addValueEventListener(mUserListener)
     }
 
     //Change user role
@@ -78,20 +68,20 @@ class MainActivity : AppCompatActivity() {
             .addValueEventListener(AppValueEventListener {
                 when (USER.role) {
                     ADMIN_ROLE -> {
-                        bottom_navigation_view.menu.clear()
-                        bottom_navigation_view.inflateMenu(R.menu.menu_bottom_nav_admin)
+                        mBinding.bottomNavigationView.menu.clear()
+                        mBinding.bottomNavigationView.inflateMenu(R.menu.menu_bottom_nav_admin)
                         mAppDrawerAdmin.create()
                         replaceFragment(AccountFragment())
                     }
                     USER_ROLE -> {
-                        bottom_navigation_view.menu.clear()
-                        bottom_navigation_view.inflateMenu(R.menu.menu_bottom_nav_user)
+                        mBinding.bottomNavigationView.menu.clear()
+                        mBinding.bottomNavigationView.inflateMenu(R.menu.menu_bottom_nav_user)
                         mAppDrawer.create()
                         replaceFragment(CatalogFragment())
                     }
                     RESTAURANTS_ROLE -> {
-                        bottom_navigation_view.menu.clear()
-                        bottom_navigation_view.inflateMenu(R.menu.menu_bottom_nav_restaurant)
+                        mBinding.bottomNavigationView.menu.clear()
+                        mBinding.bottomNavigationView.inflateMenu(R.menu.menu_bottom_nav_restaurant)
                         mAppDrawerRestaurant.create()
                         replaceFragment(AccountRestaurantFragment())
                     }
@@ -112,6 +102,14 @@ class MainActivity : AppCompatActivity() {
         REF_DATABASE_ROOT.child(NODE_ADDRESS).child(UID)
             .addListenerForSingleValueEvent(AppValueEventListener {
                 ADDRESS = it.getValue(Address::class.java) ?: Address()
+            })
+    }
+
+    //Initial restaurant
+    private fun initRestaurant() {
+        REF_DATABASE_ROOT.child(NODE_RESTAURANT).child(UID)
+            .addListenerForSingleValueEvent(AppValueEventListener {
+                RESTAURANT = it.getValue(Restaurant::class.java) ?: Restaurant()
             })
     }
 }
