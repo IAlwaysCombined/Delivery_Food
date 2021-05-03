@@ -61,5 +61,9 @@
     <string name="create_order">Оставить заявку</string>
     <string name="add">Добавить</string>
     <string name="delete">Удалить</string>
+    <string name="registration_btn_text_start_fragment">Регистрация</string>
+    <string name="auth_btn_text_start_fragment">Авторизация</string>
+    <string name="auth_text_view_auth_fragment">Авторизация</string>
+    <string name="reset_pass">Забыли пароль?</string>
 
 </resources>

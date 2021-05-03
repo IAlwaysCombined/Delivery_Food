@@ -56,6 +56,7 @@ import com.google.firebase.database.DatabaseReference
     //Initial functions
     private fun initFunc() {
         if (AUTH.currentUser != null) {
+            println("----------------------->" + USER.role)
             changeUserRole()
         } else {
             replaceActivity(AuthActivity())

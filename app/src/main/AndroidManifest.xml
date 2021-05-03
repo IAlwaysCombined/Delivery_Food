@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/food"
         android:supportsRtl="true"
         android:theme="@style/Theme.Delivery_Food">
-        <activity android:name=".activity.AuthActivity" />
+
+        <activity android:name=".activity.AuthActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

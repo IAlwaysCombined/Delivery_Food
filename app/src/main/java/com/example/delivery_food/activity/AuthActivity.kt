@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.delivery_food.databinding.ActivityAuthBinding
 import com.example.delivery_food.ui.fragment.screens.auth.AuthFragment
+import com.example.delivery_food.ui.fragment.screens.auth.StartFragment
 import com.example.delivery_food.utilites.initFirebase
 import com.example.delivery_food.utilites.replaceFragmentAuth
 
@@ -20,6 +21,6 @@ class AuthActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        replaceFragmentAuth(AuthFragment())
+        replaceFragmentAuth(StartFragment())
     }
 }

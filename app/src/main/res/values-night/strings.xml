@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="registration_btn_text_start_fragment">Регистрация</string>
+    <string name="auth_btn_text_start_fragment">Авторизация</string>
+    <string name="reset_pass">Забыли пароль?</string>
+</resources>

@@ -4,24 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.screens.auth.AuthFragment">
+    tools:context=".ui.fragment.screens.auth.AuthFragment"
+    android:background="@color/white">
+
+    <ImageButton
+        android:id="@+id/auth_btn_back"
+        style="@style/backButton"
+        app:layout_constraintBottom_toTopOf="@+id/auth_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/auth_text_view"
         style="@style/largeText"
-        android:text="@string/auth_fragment_enter_btn_text_and_text_view"
+        android:fontFamily="@font/comfortaa_regular"
+        android:text="@string/auth_text_view_auth_fragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_email"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:hint="@string/email_hint"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,12 +46,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_password"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:hint="@string/password_hint"
         app:counterEnabled="true"
         app:endIconMode="password_toggle"
@@ -62,28 +69,44 @@
 
     <Button
         android:id="@+id/btn_auth"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/button"
         android:text="@string/auth_fragment_enter_btn_text_and_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_input_layout_password" />
 
-    <TextView
-        android:id="@+id/auth_account_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/auth_fragment_create_account_now_text_view"
-        app:layout_constraintBottom_toTopOf="@id/auth_restore_password_text_view"
+    <View
+        android:id="@+id/view_or"
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/underline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_auth" />
+
+    <Button
+        android:id="@+id/btn_auth_google"
+        style="@style/button_auth_service"
+        android:text="Войти с помощью Google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_or" />
+
+    <Button
+        android:id="@+id/btn_auth_apple"
+        style="@style/button_auth_service"
+        android:text="Войти с помощью Apple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_auth_google" />
 
     <TextView
         android:id="@+id/auth_restore_password_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/auth_fragment_change_password_text_view"
+        style="@style/smallText"
+        android:text="@string/reset_pass"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

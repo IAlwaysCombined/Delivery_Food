@@ -24,14 +24,15 @@ class AuthFragment : Fragment(R.layout.fragment_auth) {
 
     override fun onStart() {
         super.onStart()
-        binding.authAccountTextView.setOnClickListener { replaceRegistrationFragment() }
+        //binding.authAccountTextView.setOnClickListener { replaceRegistrationFragment() }
         binding.authRestorePasswordTextView.setOnClickListener { restorePass() }
         binding.btnAuth.setOnClickListener { signIn() }
+        binding.authBtnBack.setOnClickListener { backStartFragment() }
     }
 
-    //Replace Fragment
-    private fun replaceRegistrationFragment() {
-        replaceFragmentAuth(RegistrationFragment())
+    //Back start fragment
+    private fun backStartFragment() {
+        replaceFragmentAuth(StartFragment())
     }
 
     //Restore password
