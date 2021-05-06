@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Delivery_Food" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.Delivery_Food" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/light_gray</item>
         <item name="colorPrimaryVariant">@color/gray</item>
@@ -85,7 +85,16 @@
         <item name="textAllCaps">false</item>
     </style>
 
-    <style name="qwe" parent="Base.Widget.MaterialComponents.TextInputLayout">
-
+    <!-- Custom theme card view. -->
+    <style name="card_view_style" parent="Theme.AppCompat.Light">
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">6dp</item>
+        <item name="cardMaxElevation">8dp</item>
+        <item name="contentPaddingBottom">26dp</item>
+        <item name="contentPaddingTop">24dp</item>
+        <item name="contentPaddingLeft">16dp</item>
+        <item name="contentPaddingRight">16dp</item>
+        <item name="android:layout_margin">20dp</item>
     </style>
+
 </resources>

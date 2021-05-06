@@ -20,6 +20,11 @@ class CreateOrdersRestaurantFragment : Fragment(R.layout.fragment_create_orders_
    override fun onStart() {
       super.onStart()
       binding.btnCreateOrder.setOnClickListener { createOrder() }
+      binding.orderRestaurantBtnBack.setOnClickListener { back() }
+   }
+
+   private fun back() {
+      replaceFragment(AccountFragment())
    }
 
    //Create restaurant order

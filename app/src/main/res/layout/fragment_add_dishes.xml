@@ -6,12 +6,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.screens.restaurant.AddDishesFragment">
 
-
-
     <TextView
         android:id="@+id/catalog_text_view"
         style="@style/largeText"
         android:text="@string/add_dishes_text_view"
+        android:fontFamily="@font/comfortaa_regular"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginEnd="@dimen/_32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/_30sp"
@@ -86,6 +87,7 @@
         app:layout_constraintTop_toBottomOf="@+id/text_input_layout_add_calories_dishes" />
 
     <Button
+        style="@style/button"
         android:id="@+id/btn_add_new_dishes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

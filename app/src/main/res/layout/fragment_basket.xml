@@ -3,6 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.screens.user.BasketFragment">
+
+    <TextView
+        android:id="@+id/catalog_text_view"
+        style="@style/largeText"
+        android:layout_marginVertical="@dimen/_30dp"
+        android:text="Корзина"
+        android:fontFamily="@font/comfortaa_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf = "parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

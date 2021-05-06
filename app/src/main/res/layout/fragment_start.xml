@@ -40,7 +40,7 @@
         android:id="@+id/under_line"
         android:layout_width="355dp"
         android:layout_height="2dp"
-        android:layout_marginVertical="20dp"
+        android:layout_margin="20dp"
         android:background="@drawable/button_style"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

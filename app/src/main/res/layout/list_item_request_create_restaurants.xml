@@ -1,36 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="270dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <TextView
-            android:id="@+id/list_restaurant_name_text_view"
-            android:layout_width="280dp"
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Название рестарана"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="10dp"
             app:layout_constraintEnd_toEndOf="parent"
+            style="@style/card_view_style"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/add_restaurant_btn"
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:text="@string/add"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/list_restaurant_name_text_view" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/delete_request_restaurant"
-            android:layout_width="150dp"
-            android:text="@string/delete"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/list_restaurant_name_text_view" />
+                        <TextView
+                            android:id="@+id/list_restaurant_name_text_view"
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:text="Название рестарана"
+                            android:textSize="@dimen/_30sp"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:textAlignment="center"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginVertical="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            style="@style/button"
+                            android:id="@+id/add_restaurant_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:text="@string/add"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/list_restaurant_name_text_view" />
+
+                        <Button
+                            style="@style/button"
+                            android:id="@+id/delete_request_restaurant"
+                            android:layout_width="120dp"
+                            android:text="@string/delete"
+                            android:layout_height="match_parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/list_restaurant_name_text_view" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,6 +26,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_email"
         android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -47,6 +48,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_password"
         android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -74,32 +76,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_input_layout_password" />
-
-    <View
-        android:id="@+id/view_or"
-        android:layout_width="0dp"
-        android:layout_height="15dp"
-        android:layout_margin="20dp"
-        android:background="@drawable/underline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_auth" />
-
-    <Button
-        android:id="@+id/btn_auth_google"
-        style="@style/button_auth_service"
-        android:text="Войти с помощью Google"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_or" />
-
-    <Button
-        android:id="@+id/btn_auth_apple"
-        style="@style/button_auth_service"
-        android:text="Войти с помощью Apple"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_auth_google" />
 
     <TextView
         android:id="@+id/auth_restore_password_text_view"

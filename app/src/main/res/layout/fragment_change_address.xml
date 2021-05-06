@@ -8,25 +8,30 @@
 
     <ImageButton
         android:id="@+id/address_btn_back"
+        style="@style/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/back_button"
-        app:layout_constraintStart_toStartOf="parent"
-        style="@style/backButton"
+        android:layout_marginStart="32dp"
         android:background="@color/white"
+        android:src="@drawable/back_button"
+        app:layout_constraintBottom_toTopOf="@+id/address_text_view"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/address_text_view"
         style="@style/largeText"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/comfortaa_regular"
         android:text="@string/account_fragment_my_address_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/address_btn_back" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_add_name_dishes"
         android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
@@ -45,6 +50,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_add_coast_dishes"
         android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
@@ -64,6 +70,7 @@
         android:id="@+id/text_input_layout_add_calories_dishes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
@@ -81,6 +88,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_change_new_flat"
         android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
@@ -97,6 +105,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        style="@style/button"
         android:id="@+id/btn_add_new_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

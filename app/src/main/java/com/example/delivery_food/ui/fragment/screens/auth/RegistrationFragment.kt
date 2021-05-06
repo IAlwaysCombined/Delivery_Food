@@ -22,8 +22,8 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
     override fun onStart() {
         super.onStart()
         binding.btnRegistration.setOnClickListener { signUp() }
-        binding.registrationAccountTextView.setOnClickListener { backAuthFragment() }
         initFirebase()
+        binding.registrationBtnBack.setOnClickListener { backAuthFragment() }
     }
 
     //Replace fragment

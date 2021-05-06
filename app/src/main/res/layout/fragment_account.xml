@@ -9,12 +9,14 @@
     <TextView
         android:id="@+id/name_text_view"
         style="@style/largeText"
+        android:fontFamily="@font/comfortaa_regular"
         android:layout_marginVertical="@dimen/_30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:layout_margin="20dp"
         android:id="@+id/orders_user"
         style="@style/buttonInformationAccount"
         android:backgroundTint="@color/white"
@@ -26,6 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/name_text_view" />
 
     <Button
+        android:layout_margin="20dp"
         android:id="@+id/data_user"
         style="@style/buttonInformationAccount"
         android:backgroundTint="@color/white"
@@ -37,6 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/orders_user" />
 
     <Button
+        android:layout_margin="20dp"
         android:id="@+id/address_user"
         style="@style/buttonInformationAccount"
         android:backgroundTint="@color/white"
@@ -48,6 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/data_user" />
 
     <Button
+        android:layout_margin="20dp"
         android:id="@+id/order_restaurants"
         style="@style/buttonInformationAccount"
         android:layout_width="match_parent"
@@ -59,6 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/address_user" />
 
     <Button
+        style="@style/button"
         android:id="@+id/btn_exit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

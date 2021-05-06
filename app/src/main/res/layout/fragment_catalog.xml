@@ -11,6 +11,7 @@
         style="@style/largeText"
         android:layout_marginVertical="@dimen/_30dp"
         android:text="Каталог"
+        android:fontFamily="@font/comfortaa_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf = "parent" />
