@@ -65,5 +65,7 @@
     <string name="auth_btn_text_start_fragment">Авторизация</string>
     <string name="auth_text_view_auth_fragment">Авторизация</string>
     <string name="reset_pass">Забыли пароль?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

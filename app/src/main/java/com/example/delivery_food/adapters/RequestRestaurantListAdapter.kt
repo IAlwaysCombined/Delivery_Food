@@ -8,8 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.delivery_food.R
 import com.example.delivery_food.models.CommonModel
-import com.example.delivery_food.utilites.NODE_ORDERS_CREATE_RESTAURANT
-import com.example.delivery_food.utilites.REF_DATABASE_ROOT
+import com.example.delivery_food.utilites.*
 
 class RequestRestaurantListAdapter(private var mRestaurantRequestList: MutableList<CommonModel> = mutableListOf()) :
     RecyclerView.Adapter<RequestRestaurantListAdapter.RestaurantViewHolder>() {
@@ -30,11 +29,22 @@ class RequestRestaurantListAdapter(private var mRestaurantRequestList: MutableLi
 
     override fun onBindViewHolder(holder: RestaurantViewHolder, position: Int) {
         holder.nameRestaurant?.text = mRestaurantRequestList[position].name
-        holder.addRestaurant?.setOnClickListener { println("Привет!!!") }
+        holder.addRestaurant?.setOnClickListener {
+            val dateMap = mutableMapOf<String, Any>()
+            dateMap[CHILD_ROLE] = RESTAURANTS_ROLE
+            dateMap[CHILD_NAME] = mRestaurantRequestList[position].name
+            dateMap[CHILD_PHONE] = mRestaurantRequestList[position].phone
+            dateMap[CHILD_PHOTO_RESTAURANT] = mRestaurantRequestList[position].image_restaurant
+            REF_DATABASE_ROOT.child(NODE_RESTAURANT).child(mRestaurantRequestList[position].uid).updateChildren(dateMap)
+            showToast("Ресторан добавлен!")
+            REF_DATABASE_ROOT.child(NODE_ORDERS_CREATE_RESTAURANT).child(mRestaurantRequestList[position].uid).removeValue()
+            REF_DATABASE_ROOT.child(NODE_USERS).child(mRestaurantRequestList[position].uid).removeValue()
+        }
         holder.deleteRequestRestaurant?.setOnClickListener {
             REF_DATABASE_ROOT.child(
                 NODE_ORDERS_CREATE_RESTAURANT
             ).child(mRestaurantRequestList[position].uid).removeValue()
+            showToast("Заявка на создание ресторана отклонена!")
         }
     }
 

@@ -28,8 +28,8 @@ class RequestFragment : Fragment(R.layout.fragment_request) {
         binding = FragmentRequestBinding.bind(view)
     }
 
-    override fun onStart() {
-        super.onStart()
+    override fun onResume() {
+        super.onResume()
         getAllUsers()
     }
 

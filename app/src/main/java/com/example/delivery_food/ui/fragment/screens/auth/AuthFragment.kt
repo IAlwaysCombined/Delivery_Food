@@ -7,10 +7,7 @@ import androidx.fragment.app.Fragment
 import com.example.delivery_food.MainActivity
 import com.example.delivery_food.R
 import com.example.delivery_food.databinding.FragmentAuthBinding
-import com.example.delivery_food.utilites.AUTH
-import com.example.delivery_food.utilites.replaceActivity
-import com.example.delivery_food.utilites.replaceFragmentAuth
-import com.example.delivery_food.utilites.showToast
+import com.example.delivery_food.utilites.*
 
 
 class AuthFragment : Fragment(R.layout.fragment_auth) {

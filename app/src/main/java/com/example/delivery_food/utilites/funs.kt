@@ -4,10 +4,12 @@ package com.example.delivery_food.utilites
 
 import android.app.Activity
 import android.content.Intent
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.delivery_food.R
+import com.squareup.picasso.Picasso
 
 fun showToast(message: String) {
     Toast.makeText(APP_ACTIVITY, message, Toast.LENGTH_SHORT).show()
@@ -50,4 +52,13 @@ fun Fragment.replaceFragmentAuth(fragment: Fragment) {
         ?.addToBackStack(null)
         ?.replace(R.id.auth_container, fragment)
         ?.commit()
+}
+
+//Image view function
+fun ImageView.downloadAndSetImage(url: String) {
+    Picasso.get()
+        .load(url)
+        .fit()
+        .placeholder(R.mipmap.ic_launcher)
+        .into(this)
 }
