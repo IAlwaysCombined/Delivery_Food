@@ -3,17 +3,18 @@ package com.example.delivery_food.ui.fragment.screens.user
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
 import com.example.delivery_food.R
-import com.example.delivery_food.adapters.RequestRestaurantListAdapter
 import com.example.delivery_food.adapters.RestaurantListAdapter
 import com.example.delivery_food.databinding.FragmentCatalogBinding
 import com.example.delivery_food.models.CommonModel
 import com.example.delivery_food.utilites.*
 import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ValueEventListener
-import com.example.delivery_food.utilites.REF_DATABASE_ROOT as REF_DATABASE_ROOT
 
+
+@Suppress("DEPRECATION")
 class CatalogFragment : Fragment(R.layout.fragment_catalog) {
 
     private lateinit var mAdapter: RestaurantListAdapter
@@ -46,6 +47,5 @@ class CatalogFragment : Fragment(R.layout.fragment_catalog) {
             mRecyclerView.smoothScrollToPosition(mAdapter.itemCount)
         }
         mRefRestaurant.addValueEventListener(mRestaurantListener)
-
     }
 }

@@ -28,6 +28,7 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
         binding.dataUser.setOnClickListener { changeDataUser() }
         binding.addressUser.setOnClickListener { changeAddressUser() }
         binding.orderRestaurants.setOnClickListener { orderOnCrateRestaurant() }
+        binding.ordersUser.setOnClickListener { replaceFragment(MyOrdersFragment()) }
     }
 
     //Create restaurant order replace fragment

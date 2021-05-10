@@ -28,13 +28,19 @@ const val FOLDER_PHOTO_RESTAURANT = "photo_restaurant"
 //User const
 const val NODE_USERS = "users"
 const val NODE_ADDRESS = "address"
+const val NODE_ORDER = "order"
+const val NODE_BASKET = "basket"
 const val NODE_RESTAURANT = "restaurant"
 const val NODE_ORDERS_CREATE_RESTAURANT = "orders_create_restaurant"
+const val NODE_DISHES = "dishes"
 const val CHILD_PHONE = "phone"
 const val CHILD_ROLE = "role"
 const val CHILD_NAME = "name"
 const val CHILD_ID = "uid"
 const val CHILD_PHOTO_RESTAURANT = "image_restaurant"
+const val CHILD_COUNT = "count"
+const val CHILD_NAME_RESTAURANT = "name_restaurant"
+
 
 //Address const
 const val CHILD_HOUSE = "house"

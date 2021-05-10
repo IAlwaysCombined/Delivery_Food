@@ -8,7 +8,11 @@
         android:id="@+id/catalogFragment"
         android:name="com.example.delivery_food.ui.fragment.screens.user.CatalogFragment"
         android:label="fragment_catalog"
-        tools:layout="@layout/fragment_catalog" />
+        tools:layout="@layout/fragment_catalog" >
+        <action
+            android:id="@+id/action_catalogFragment_to_dishesListFragment"
+            app:destination="@id/dishesListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/accountFragment"
         android:name="com.example.delivery_food.ui.fragment.screens.user.AccountFragment"
@@ -18,5 +22,15 @@
         android:id="@+id/basketFragment"
         android:name="com.example.delivery_food.ui.fragment.screens.user.BasketFragment"
         android:label="fragment_basket"
-        tools:layout="@layout/fragment_basket" />
+        tools:layout="@layout/fragment_basket">
+        <argument
+            android:name="restaurantName"
+            android:defaultValue="Hello, Android!" />
+    </fragment>
+    <fragment
+        android:id="@+id/dishesListFragment"
+        android:name="com.example.delivery_food.ui.fragment.screens.user.DishesListFragment"
+        android:label="fragment_dishes_list"
+        tools:layout="@layout/fragment_dishes_list" />
+
 </navigation>
